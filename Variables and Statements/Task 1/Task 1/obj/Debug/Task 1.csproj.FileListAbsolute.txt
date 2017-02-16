@@ -1,0 +1,6 @@
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\bin\Debug\Task 1.exe.config
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\bin\Debug\Task 1.exe
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\bin\Debug\Task 1.pdb
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\obj\Debug\Task 1.csprojResolveAssemblyReference.cache
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\obj\Debug\Task 1.exe
+D:\IBA\C#\Variables and Statements\Task 1\Task 1\obj\Debug\Task 1.pdb
