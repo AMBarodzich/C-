@@ -29,6 +29,20 @@ namespace Task_1
             }
             return average / (double)marks.Length;
         }
+
+        public void MaxAndMin(out int max, out int min)
+        {
+            max = marks[0].subjectMark;
+            min = marks[0].subjectMark;
+            for (int i = 0; i < marks.Length; i++)
+            {
+                if (marks[i].subjectMark > max)
+                    max = marks[i].subjectMark;
+                if (marks[i].subjectMark < min)
+                    min = marks[i].subjectMark;
+            }
+        }
+
     }
 
     public class Mark
