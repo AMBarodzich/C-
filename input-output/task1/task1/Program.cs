@@ -13,7 +13,7 @@ namespace task1
         static void GetFile(string _dirName)
         {
             Console.WriteLine("Files:");
-            string[] files = Directory.GetFiles(_dirName);
+            string[] files = Directory.GetFileSystemEntries(_dirName);
 
             Console.WriteLine("Choose file:");
             for (int i = 0; i < files.Length; i++)
