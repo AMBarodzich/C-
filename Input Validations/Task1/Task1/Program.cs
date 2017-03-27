@@ -14,7 +14,7 @@ namespace Task1
         {
             Console.WriteLine("Enter email: ");
             string email = Convert.ToString(Console.ReadLine());
-            if (Regex.IsMatch(email, @"^[a-zA-Z0-9._%-]+@[a-zA-Z0-9._%-]+\.[a-zA-Z]{2,4}\s*$", RegexOptions.IgnoreCase))
+            if (Regex.IsMatch(email, @"^[\W]*([\w+\-.%]+@[\w\-.]+\.[A-Za-z]{2,4}[\W]*,{1}[\W]*)*([\w+\-.%]+@[\w\-.]+\.[A-Za-z]{2,4})[\W]*$", RegexOptions.IgnoreCase))
             {
                 Console.WriteLine("Validated Email.");
             }
