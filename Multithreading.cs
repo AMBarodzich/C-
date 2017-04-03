@@ -50,15 +50,13 @@ namespace Task1
 
             int choose = 0;
 
-            while (choose != 4)
+            while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Menu: \n1. Start. \n2. Pause. \n3. Restart. \n4. Exit.");
-                try
-                {
-                    choose = Convert.ToInt32(Console.ReadLine());
-                }
-                catch (FormatException) { }
+                Console.WriteLine("Menu: \n1. Start. \n2. Pause. \n3. Restart.");
+
+                choose = Convert.ToInt32(Console.ReadLine());
+
                 switch (choose)
                 {
                     case 1:
@@ -95,18 +93,6 @@ namespace Task1
                             th.Join();
                         }
                         th = new Thread(new ThreadStart(Stopwatch));
-                        break;
-                    case 4:
-                        if (start)
-                        {
-                            start = false;
-                            if (pause)
-                            {
-                                pause = false;
-                                mutexObj.ReleaseMutex();
-                            }
-                            th.Join();
-                        }
                         break;
                 }
                 Console.ReadKey();
