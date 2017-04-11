@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Threading;
+
 
 namespace Task1
 {
@@ -43,7 +48,6 @@ namespace Task1
             }
         }
 
-        //
         static void Main(string[] args)
         {
             Thread th = new Thread(new ThreadStart(Stopwatch));
@@ -53,49 +57,72 @@ namespace Task1
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Menu: \n1. Start. \n2. Pause. \n3. Restart.");
-
-                choose = Convert.ToInt32(Console.ReadLine());
-
-                switch (choose)
+                Console.WriteLine("Menu: \n1. Start. \n2. Pause. \n3. Restart. \n4. Exit.");
+                try
                 {
-                    case 1:
-                        if (!pause)
+                    choose = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("You have entered invalid character");
+                    throw;
+
+                }
+                if (choose == 1)
+                {
+                    if (!pause)
+                    {
+                        if (!start)
                         {
-                            if (!start)
-                            {
-                                start = true;
-                                th.Start();
-                            }
+                            start = true;
+                            th.Start();
                         }
-                        else
+                    }
+                    else
+                    {
+                        pause = false;
+                        mutexObj.ReleaseMutex();
+                    }
+
+                }
+                if (choose == 2)
+                {
+                    if (!pause)
+                    {
+                        mutexObj.WaitOne();
+                        pause = true;
+                    }
+
+                }
+                if (choose == 3)
+                {
+                    if (start)
+                    {
+                        start = false;
+                        if (pause)
                         {
                             pause = false;
                             mutexObj.ReleaseMutex();
                         }
-                        break;
-                    case 2:
-                        if (!pause)
-                        {
-                            mutexObj.WaitOne();
-                            pause = true;
-                        }
-                        break;
-                    case 3:
-                        if (start)
-                        {
-                            start = false;
-                            if (pause)
-                            {
-                                pause = false;
-                                mutexObj.ReleaseMutex();
-                            }
-                            th.Join();
-                        }
-                        th = new Thread(new ThreadStart(Stopwatch));
-                        break;
+                        th.Join();
+                    }
+                    th = new Thread(new ThreadStart(Stopwatch));
+
                 }
-                Console.ReadKey();
+                if (choose == 4)
+                {
+                    if (start)
+                    {
+                        start = false;
+                        if (pause)
+                        {
+                            pause = false;
+                            mutexObj.ReleaseMutex();
+                        }
+                        th.Join();
+                    }
+                    break;
+                }
             }
         }
     }
