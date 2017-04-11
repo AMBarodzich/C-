@@ -1,0 +1,8 @@
+D:\IBA\C#\Managing program flow\Task1\Task1\bin\Debug\Task1.exe.config
+D:\IBA\C#\Managing program flow\Task1\Task1\bin\Debug\Task1.exe
+D:\IBA\C#\Managing program flow\Task1\Task1\bin\Debug\Task1.pdb
+D:\IBA\C#\Managing program flow\Task1\Task1\bin\Debug\MathNet.Numerics.dll
+D:\IBA\C#\Managing program flow\Task1\Task1\bin\Debug\MathNet.Numerics.xml
+D:\IBA\C#\Managing program flow\Task1\Task1\obj\Debug\Task1.csprojResolveAssemblyReference.cache
+D:\IBA\C#\Managing program flow\Task1\Task1\obj\Debug\Task1.exe
+D:\IBA\C#\Managing program flow\Task1\Task1\obj\Debug\Task1.pdb
