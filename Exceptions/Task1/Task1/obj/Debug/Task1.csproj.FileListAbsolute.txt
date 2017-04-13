@@ -1,0 +1,8 @@
+D:\IBA\C#\Exceptions\Task1\Task1\bin\Debug\Task1.exe.config
+D:\IBA\C#\Exceptions\Task1\Task1\obj\Debug\Task1.csprojResolveAssemblyReference.cache
+D:\IBA\C#\Exceptions\Task1\Task1\bin\Debug\Task1.exe
+D:\IBA\C#\Exceptions\Task1\Task1\bin\Debug\Task1.pdb
+D:\IBA\C#\Exceptions\Task1\Task1\bin\Debug\Validation.dll
+D:\IBA\C#\Exceptions\Task1\Task1\bin\Debug\Validation.xml
+D:\IBA\C#\Exceptions\Task1\Task1\obj\Debug\Task1.exe
+D:\IBA\C#\Exceptions\Task1\Task1\obj\Debug\Task1.pdb
